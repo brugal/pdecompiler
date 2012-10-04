@@ -1,0 +1,2 @@
+Decompile some of the output from 'pedisassem' disassembler.  Handles some branching logic and register setting and outputs in 'C' syntax.
+

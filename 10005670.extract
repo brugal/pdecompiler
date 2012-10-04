@@ -1,0 +1,1471 @@
+:10005670 55                      push ebp
+:10005671 8BEC                    mov ebp, esp
+:10005673 83E4F8                  and esp, -00000008
+:10005676 83EC44                  sub esp, 00000044
+:10005679 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:1000567E 53                      push ebx
+:1000567F 56                      push esi
+:10005680 57                      push edi
+:10005681 85C0                    test eax, eax
+:10005683 7442                    je 100056C7
+:10005685 68F4E00210              push 1002E0F4
+                      (StringData)"w+"
+:1000568A 68E8E00210              push 1002E0E8
+                      (StringData)"c:/rrr.dat"
+:1000568F E8CCCA0100              call 10022160
+:10005694 83C408                  add esp, 00000008
+:10005697 89442424                mov dword[esp+24], eax
+:1000569B 68F4E00210              push 1002E0F4
+                      (StringData)"w+"
+:100056A0 68DCE00210              push 1002E0DC
+                      (StringData)"c:/ggg.dat"
+:100056A5 E8B6CA0100              call 10022160
+:100056AA 83C408                  add esp, 00000008
+:100056AD 89442414                mov dword[esp+14], eax
+:100056B1 68F4E00210              push 1002E0F4
+                      (StringData)"w+"
+:100056B6 68D0E00210              push 1002E0D0
+                      (StringData)"c:/bbb.dat"
+:100056BB E8A0CA0100              call 10022160
+:100056C0 83C408                  add esp, 00000008
+:100056C3 89442428                mov dword[esp+28], eax
+---------
+:100056C7 8B4520                  mov eax, dword[ebp+20] ; , arg7
+:100056CA 8B5528                  mov edx, dword[ebp+28] ; , arg9
+:100056CD 8944242C                mov dword[esp+2C], eax
+:100056D1 8B4518                  mov eax, dword[ebp+18] ; , arg5
+:100056D4 89542430                mov dword[esp+30], edx
+:100056D8 8B5510                  mov edx, dword[ebp+10] ; , arg3
+:100056DB 8B7D14                  mov edi, dword[ebp+14] ; , arg4
+:100056DE 2BC2                    sub eax, edx
+:100056E0 40                      inc eax
+:100056E1 8B4D24                  mov ecx, dword[ebp+24] ; , arg8
+:100056E4 89442420                mov dword[esp+20], eax
+:100056E8 8B451C                  mov eax, dword[ebp+1C] ; , arg6
+:100056EB 8B5D08                  mov ebx, dword[ebp+08] ; , arg1
+:100056EE 2BC7                    sub eax, edi
+:100056F0 40                      inc eax
+:100056F1 894C2418                mov dword[esp+18], ecx
+:100056F5 8944241C                mov dword[esp+1C], eax
+:100056F9 A160C32B10              mov eax, dword[102BC360]
+:100056FE 83F80C                  cmp eax, 0000000C
+:10005701 B106                    mov cl, 06
+:10005703 7722                    ja 10005727
+:10005705 FF248598660010          jmp dword[4*eax+10006698]
+:1000570C C644240F02              mov byte[esp+0F], 02
+:10005711 EB19                    jmp 1000572C
+---------
+:10005713 C644240F02              mov byte[esp+0F], 02
+:10005718 EB12                    jmp 1000572C
+---------
+:1000571A 884C240F                mov byte[esp+0F], cl
+:1000571E EB0C                    jmp 1000572C
+---------
+:10005720 C644240F01              mov byte[esp+0F], 01
+:10005725 EB05                    jmp 1000572C
+---------
+:10005727 C644240F03              mov byte[esp+0F], 03
+---------
+:1000572C 384C240F                cmp byte[esp+0F], cl
+:10005730 0F85D8050000            jne 10005D0E
+:10005736 8B442420                mov eax, dword[esp+20]
+:1000573A C744241000000000        mov dword[esp+10], 00000000
+:10005742 85C0                    test eax, eax
+:10005744 0F8EC4050000            jle 10005D0E
+:1000574A 8B750C                  mov esi, dword[ebp+0C] ; , arg2
+:1000574D 8B7C241C                mov edi, dword[esp+1C] ; , arg6
+---------
+:10005751 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005756 C744244000000000        mov dword[esp+40], 00000000
+:1000575E 85C0                    test eax, eax
+:10005760 C744244400000000        mov dword[esp+44], 00000000
+:10005768 7417                    je 10005781
+:1000576A 8B442410                mov eax, dword[esp+10]
+:1000576E 8B4C2424                mov ecx, dword[esp+24]
+:10005772 50                      push eax
+:10005773 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10005778 51                      push ecx
+:10005779 E852C90100              call 100220D0
+:1000577E 83C40C                  add esp, 0000000C
+---------
+:10005781 85FF                    test edi, edi
+:10005783 7E68                    jle 100057ED
+:10005785 8BC3                    mov eax, ebx
+:10005787 897C2438                mov dword[esp+38], edi
+:1000578B 89442434                mov dword[esp+34], eax
+---------
+:1000578F 8B0D68891210            mov ecx, dword[10128968] ; , GDumpDarkGain
+:10005795 85C9                    test ecx, ecx
+:10005797 741F                    je 100057B8
+:10005799 8B442434                mov eax, dword[esp+34]
+:1000579D 8B4C2424                mov ecx, dword[esp+24]
+:100057A1 33D2                    xor edx, edx
+:100057A3 8A10                    mov dl, byte[eax]
+:100057A5 52                      push edx
+:100057A6 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:100057AB 51                      push ecx
+:100057AC E81FC90100              call 100220D0
+:100057B1 8B442440                mov eax, dword[esp+40]
+:100057B5 83C40C                  add esp, 0000000C
+---------
+:100057B8 660FB65001              movzx dx, byte[eax+01]
+:100057BD 660FB608                movzx cx, byte[eax]
+:100057C1 C1E208                  shl edx, 08
+:100057C4 03D1                    add edx, ecx
+:100057C6 8B4C2438                mov ecx, dword[esp+38]
+:100057CA 81E2FFFF0000            and edx, 0000FFFF
+:100057D0 03C6                    add eax, esi
+:100057D2 89542434                mov dword[esp+34], edx
+:100057D6 49                      dec ecx
+:100057D7 DB442434                fild dword[esp+34]
+:100057DB 89442434                mov dword[esp+34], eax
+:100057DF 894C2438                mov dword[esp+38], ecx
+:100057E3 DC442440                fadd 64real[esp+40]
+:100057E7 DD5C2440                fstp 64real[esp+40]
+:100057EB 75A2                    jne 1000578F
+---------
+:100057ED DD442440                fld 64real[esp+40]
+:100057F1 DB44241C                fild dword[esp+1C]
+:100057F5 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100057FA 85C0                    test eax, eax
+:100057FC DD5C2448                fstp 64real[esp+48]
+:10005800 DC742448                fdiv 64real[esp+48]
+:10005804 DD5C2438                fstp 64real[esp+38]
+:10005808 741C                    je 10005826
+:1000580A 8B54243C                mov edx, dword[esp+3C]
+:1000580E 8B442438                mov eax, dword[esp+38]
+:10005812 8B4C2424                mov ecx, dword[esp+24]
+:10005816 52                      push edx
+:10005817 50                      push eax
+:10005818 68B8E00210              push 1002E0B8
+                      (StringData)"==>%3d <lf>"
+:1000581D 51                      push ecx
+:1000581E E8ADC80100              call 100220D0
+:10005823 83C410                  add esp, 00000010
+---------
+:10005826 8B54243C                mov edx, dword[esp+3C]
+:1000582A 8B442438                mov eax, dword[esp+38]
+:1000582E 6A01                    push 00000001
+:10005830 6800001240              push 40120000
+:10005835 6A00                    push 00000000
+:10005837 6800003940              push 40390000
+:1000583C 6A00                    push 00000000
+:1000583E 57                      push edi
+:1000583F 56                      push esi
+:10005840 53                      push ebx
+:10005841 52                      push edx
+:10005842 50                      push eax
+:10005843 E8880E0000              call 100066D0
+:10005848 DD5C2460                fstp 64real[esp+60]
+:1000584C 83C428                  add esp, 00000028
+:1000584F 8B4C243C                mov ecx, dword[esp+3C]
+:10005853 8B542438                mov edx, dword[esp+38]
+:10005857 6A01                    push 00000001
+:10005859 6800001240              push 40120000
+:1000585E 6A00                    push 00000000
+:10005860 6800003940              push 40390000
+:10005865 6A00                    push 00000000
+:10005867 57                      push edi
+:10005868 56                      push esi
+:10005869 53                      push ebx
+:1000586A 51                      push ecx
+:1000586B 52                      push edx
+:1000586C E85F0E0000              call 100066D0
+:10005871 DD5C2460                fstp 64real[esp+60]
+:10005875 83C428                  add esp, 00000028
+:10005878 8B44243C                mov eax, dword[esp+3C]
+:1000587C 8B4C2438                mov ecx, dword[esp+38]
+:10005880 6A01                    push 00000001
+:10005882 6800001240              push 40120000
+:10005887 6A00                    push 00000000
+:10005889 6800003940              push 40390000
+:1000588E 6A00                    push 00000000
+:10005890 57                      push edi
+:10005891 56                      push esi
+:10005892 53                      push ebx
+:10005893 50                      push eax
+:10005894 51                      push ecx
+:10005895 E8360E0000              call 100066D0
+:1000589A DD5C2460                fstp 64real[esp+60]
+:1000589E 83C428                  add esp, 00000028
+:100058A1 8B54243C                mov edx, dword[esp+3C]
+:100058A5 8B442438                mov eax, dword[esp+38]
+:100058A9 6A01                    push 00000001
+:100058AB 6800001240              push 40120000
+:100058B0 6A00                    push 00000000
+:100058B2 6800003940              push 40390000
+:100058B7 6A00                    push 00000000
+:100058B9 57                      push edi
+:100058BA 56                      push esi
+:100058BB 53                      push ebx
+:100058BC 52                      push edx
+:100058BD 50                      push eax
+:100058BE E80D0E0000              call 100066D0
+:100058C3 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100058C8 83C428                  add esp, 00000028
+:100058CB DD5C2438                fstp 64real[esp+38]
+:100058CF 85C0                    test eax, eax
+:100058D1 741C                    je 100058EF
+:100058D3 8B4C243C                mov ecx, dword[esp+3C]
+:100058D7 8B542438                mov edx, dword[esp+38]
+:100058DB 8B442424                mov eax, dword[esp+24]
+:100058DF 51                      push ecx
+:100058E0 52                      push edx
+:100058E1 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:100058E6 50                      push eax
+:100058E7 E8E4C70100              call 100220D0
+:100058EC 83C410                  add esp, 00000010
+---------
+:100058EF DD442438                fld 64real[esp+38]
+:100058F3 E8C8C60100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:100058F8 8BC8                    mov ecx, eax
+:100058FA 83C302                  add ebx, 00000002
+:100058FD 99                      cdq
+:100058FE 33C2                    xor eax, edx
+:10005900 C744244000000000        mov dword[esp+40], 00000000
+:10005908 2BC2                    sub eax, edx
+:1000590A C744244400000000        mov dword[esp+44], 00000000
+:10005912 25FF000000              and eax, 000000FF
+:10005917 33C2                    xor eax, edx
+:10005919 2BC2                    sub eax, edx
+:1000591B 89442438                mov dword[esp+38], eax
+:1000591F 8B44242C                mov eax, dword[esp+2C]
+:10005923 8B542438                mov edx, dword[esp+38]
+:10005927 8810                    mov byte[eax], dl
+:10005929 40                      inc eax
+:1000592A 8944242C                mov dword[esp+2C], eax
+:1000592E 8BC1                    mov eax, ecx
+:10005930 99                      cdq
+:10005931 81E2FF000000            and edx, 000000FF
+:10005937 03C2                    add eax, edx
+:10005939 8BC8                    mov ecx, eax
+:1000593B 8B44242C                mov eax, dword[esp+2C]
+:1000593F C1F908                  sar ecx, 08
+:10005942 8808                    mov byte[eax], cl
+:10005944 40                      inc eax
+:10005945 8944242C                mov dword[esp+2C], eax
+:10005949 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:1000594E 85C0                    test eax, eax
+:10005950 7417                    je 10005969
+:10005952 8B542410                mov edx, dword[esp+10]
+:10005956 8B442414                mov eax, dword[esp+14]
+:1000595A 52                      push edx
+:1000595B 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10005960 50                      push eax
+:10005961 E86AC70100              call 100220D0
+:10005966 83C40C                  add esp, 0000000C
+---------
+:10005969 85FF                    test edi, edi
+:1000596B 7E68                    jle 100059D5
+:1000596D 8BC3                    mov eax, ebx
+:1000596F 897C2438                mov dword[esp+38], edi
+:10005973 89442434                mov dword[esp+34], eax
+---------
+:10005977 8B0D68891210            mov ecx, dword[10128968] ; , GDumpDarkGain
+:1000597D 85C9                    test ecx, ecx
+:1000597F 741F                    je 100059A0
+:10005981 8B542434                mov edx, dword[esp+34]
+:10005985 8B442414                mov eax, dword[esp+14]
+:10005989 33C9                    xor ecx, ecx
+:1000598B 8A0A                    mov cl, byte[edx]
+:1000598D 51                      push ecx
+:1000598E 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:10005993 50                      push eax
+:10005994 E837C70100              call 100220D0
+:10005999 8B442440                mov eax, dword[esp+40]
+:1000599D 83C40C                  add esp, 0000000C
+---------
+:100059A0 660FB64801              movzx cx, byte[eax+01]
+:100059A5 660FB610                movzx dx, byte[eax]
+:100059A9 C1E108                  shl ecx, 08
+:100059AC 03CA                    add ecx, edx
+:100059AE 03C6                    add eax, esi
+:100059B0 81E1FFFF0000            and ecx, 0000FFFF
+:100059B6 894C2434                mov dword[esp+34], ecx
+:100059BA 8B4C2438                mov ecx, dword[esp+38]
+:100059BE DB442434                fild dword[esp+34]
+:100059C2 49                      dec ecx
+:100059C3 89442434                mov dword[esp+34], eax
+:100059C7 894C2438                mov dword[esp+38], ecx
+:100059CB DC442440                fadd 64real[esp+40]
+:100059CF DD5C2440                fstp 64real[esp+40]
+:100059D3 75A2                    jne 10005977
+---------
+:100059D5 DD442440                fld 64real[esp+40]
+:100059D9 DC742448                fdiv 64real[esp+48]
+:100059DD A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100059E2 85C0                    test eax, eax
+:100059E4 DD5C2438                fstp 64real[esp+38]
+:100059E8 741C                    je 10005A06
+:100059EA 8B44243C                mov eax, dword[esp+3C]
+:100059EE 8B4C2438                mov ecx, dword[esp+38]
+:100059F2 8B542414                mov edx, dword[esp+14]
+:100059F6 50                      push eax
+:100059F7 51                      push ecx
+:100059F8 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:100059FD 52                      push edx
+:100059FE E8CDC60100              call 100220D0
+:10005A03 83C410                  add esp, 00000010
+---------
+:10005A06 8B44243C                mov eax, dword[esp+3C]
+:10005A0A 8B4C2438                mov ecx, dword[esp+38]
+:10005A0E 6A01                    push 00000001
+:10005A10 6800001240              push 40120000
+:10005A15 6A00                    push 00000000
+:10005A17 6800003940              push 40390000
+:10005A1C 6A00                    push 00000000
+:10005A1E 57                      push edi
+:10005A1F 56                      push esi
+:10005A20 53                      push ebx
+:10005A21 50                      push eax
+:10005A22 51                      push ecx
+:10005A23 E8A80C0000              call 100066D0
+:10005A28 DD5C2460                fstp 64real[esp+60]
+:10005A2C 83C428                  add esp, 00000028
+:10005A2F 8B54243C                mov edx, dword[esp+3C]
+:10005A33 8B442438                mov eax, dword[esp+38]
+:10005A37 6A01                    push 00000001
+:10005A39 6800001240              push 40120000
+:10005A3E 6A00                    push 00000000
+:10005A40 6800003940              push 40390000
+:10005A45 6A00                    push 00000000
+:10005A47 57                      push edi
+:10005A48 56                      push esi
+:10005A49 53                      push ebx
+:10005A4A 52                      push edx
+:10005A4B 50                      push eax
+:10005A4C E87F0C0000              call 100066D0
+:10005A51 DD5C2460                fstp 64real[esp+60]
+:10005A55 83C428                  add esp, 00000028
+:10005A58 8B4C243C                mov ecx, dword[esp+3C]
+:10005A5C 8B542438                mov edx, dword[esp+38]
+:10005A60 6A01                    push 00000001
+:10005A62 6800001240              push 40120000
+:10005A67 6A00                    push 00000000
+:10005A69 6800003940              push 40390000
+:10005A6E 6A00                    push 00000000
+:10005A70 57                      push edi
+:10005A71 56                      push esi
+:10005A72 53                      push ebx
+:10005A73 51                      push ecx
+:10005A74 52                      push edx
+:10005A75 E8560C0000              call 100066D0
+:10005A7A DD5C2460                fstp 64real[esp+60]
+:10005A7E 83C428                  add esp, 00000028
+:10005A81 8B44243C                mov eax, dword[esp+3C]
+:10005A85 8B4C2438                mov ecx, dword[esp+38]
+:10005A89 6A01                    push 00000001
+:10005A8B 6800001240              push 40120000
+:10005A90 6A00                    push 00000000
+:10005A92 6800003940              push 40390000
+:10005A97 6A00                    push 00000000
+:10005A99 57                      push edi
+:10005A9A 56                      push esi
+:10005A9B 53                      push ebx
+:10005A9C 50                      push eax
+:10005A9D 51                      push ecx
+:10005A9E E82D0C0000              call 100066D0
+:10005AA3 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005AA8 83C428                  add esp, 00000028
+:10005AAB DD5C2438                fstp 64real[esp+38]
+:10005AAF 85C0                    test eax, eax
+:10005AB1 741C                    je 10005ACF
+:10005AB3 8B54243C                mov edx, dword[esp+3C]
+:10005AB7 8B442438                mov eax, dword[esp+38]
+:10005ABB 8B4C2414                mov ecx, dword[esp+14]
+:10005ABF 52                      push edx
+:10005AC0 50                      push eax
+:10005AC1 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:10005AC6 51                      push ecx
+:10005AC7 E804C60100              call 100220D0
+:10005ACC 83C410                  add esp, 00000010
+---------
+:10005ACF DD442438                fld 64real[esp+38]
+:10005AD3 E8E8C40100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:10005AD8 8BC8                    mov ecx, eax
+:10005ADA 83C302                  add ebx, 00000002
+:10005ADD 99                      cdq
+:10005ADE 33C2                    xor eax, edx
+:10005AE0 C744244000000000        mov dword[esp+40], 00000000
+:10005AE8 2BC2                    sub eax, edx
+:10005AEA C744244400000000        mov dword[esp+44], 00000000
+:10005AF2 25FF000000              and eax, 000000FF
+:10005AF7 33C2                    xor eax, edx
+:10005AF9 2BC2                    sub eax, edx
+:10005AFB 89442438                mov dword[esp+38], eax
+:10005AFF 8B442418                mov eax, dword[esp+18]
+:10005B03 8B542438                mov edx, dword[esp+38]
+:10005B07 8810                    mov byte[eax], dl
+:10005B09 40                      inc eax
+:10005B0A 89442418                mov dword[esp+18], eax
+:10005B0E 8BC1                    mov eax, ecx
+:10005B10 99                      cdq
+:10005B11 81E2FF000000            and edx, 000000FF
+:10005B17 03C2                    add eax, edx
+:10005B19 8BC8                    mov ecx, eax
+:10005B1B 8B442418                mov eax, dword[esp+18]
+:10005B1F C1F908                  sar ecx, 08
+:10005B22 8808                    mov byte[eax], cl
+:10005B24 40                      inc eax
+:10005B25 89442418                mov dword[esp+18], eax
+:10005B29 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005B2E 85C0                    test eax, eax
+:10005B30 7417                    je 10005B49
+:10005B32 8B542410                mov edx, dword[esp+10]
+:10005B36 8B442428                mov eax, dword[esp+28]
+:10005B3A 52                      push edx
+:10005B3B 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10005B40 50                      push eax
+:10005B41 E88AC50100              call 100220D0
+:10005B46 83C40C                  add esp, 0000000C
+---------
+:10005B49 85FF                    test edi, edi
+:10005B4B 7E68                    jle 10005BB5
+:10005B4D 8BC3                    mov eax, ebx
+:10005B4F 897C2438                mov dword[esp+38], edi
+:10005B53 89442434                mov dword[esp+34], eax
+---------
+:10005B57 8B0D68891210            mov ecx, dword[10128968] ; , GDumpDarkGain
+:10005B5D 85C9                    test ecx, ecx
+:10005B5F 741F                    je 10005B80
+:10005B61 8B542434                mov edx, dword[esp+34]
+:10005B65 8B442428                mov eax, dword[esp+28]
+:10005B69 33C9                    xor ecx, ecx
+:10005B6B 8A0A                    mov cl, byte[edx]
+:10005B6D 51                      push ecx
+:10005B6E 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:10005B73 50                      push eax
+:10005B74 E857C50100              call 100220D0
+:10005B79 8B442440                mov eax, dword[esp+40]
+:10005B7D 83C40C                  add esp, 0000000C
+---------
+:10005B80 660FB64801              movzx cx, byte[eax+01]
+:10005B85 660FB610                movzx dx, byte[eax]
+:10005B89 C1E108                  shl ecx, 08
+:10005B8C 03CA                    add ecx, edx
+:10005B8E 03C6                    add eax, esi
+:10005B90 81E1FFFF0000            and ecx, 0000FFFF
+:10005B96 894C2434                mov dword[esp+34], ecx
+:10005B9A 8B4C2438                mov ecx, dword[esp+38]
+:10005B9E DB442434                fild dword[esp+34]
+:10005BA2 49                      dec ecx
+:10005BA3 89442434                mov dword[esp+34], eax
+:10005BA7 894C2438                mov dword[esp+38], ecx
+:10005BAB DC442440                fadd 64real[esp+40]
+:10005BAF DD5C2440                fstp 64real[esp+40]
+:10005BB3 75A2                    jne 10005B57
+---------
+:10005BB5 DD442440                fld 64real[esp+40]
+:10005BB9 DC742448                fdiv 64real[esp+48]
+:10005BBD A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005BC2 85C0                    test eax, eax
+:10005BC4 DD5C2438                fstp 64real[esp+38]
+:10005BC8 741C                    je 10005BE6
+:10005BCA 8B44243C                mov eax, dword[esp+3C]
+:10005BCE 8B4C2438                mov ecx, dword[esp+38]
+:10005BD2 8B542428                mov edx, dword[esp+28]
+:10005BD6 50                      push eax
+:10005BD7 51                      push ecx
+:10005BD8 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:10005BDD 52                      push edx
+:10005BDE E8EDC40100              call 100220D0
+:10005BE3 83C410                  add esp, 00000010
+---------
+:10005BE6 8B44243C                mov eax, dword[esp+3C]
+:10005BEA 8B4C2438                mov ecx, dword[esp+38]
+:10005BEE 6A01                    push 00000001
+:10005BF0 6800001240              push 40120000
+:10005BF5 6A00                    push 00000000
+:10005BF7 6800003940              push 40390000
+:10005BFC 6A00                    push 00000000
+:10005BFE 57                      push edi
+:10005BFF 56                      push esi
+:10005C00 53                      push ebx
+:10005C01 50                      push eax
+:10005C02 51                      push ecx
+:10005C03 E8C80A0000              call 100066D0
+:10005C08 DD5C2460                fstp 64real[esp+60]
+:10005C0C 83C428                  add esp, 00000028
+:10005C0F 8B54243C                mov edx, dword[esp+3C]
+:10005C13 8B442438                mov eax, dword[esp+38]
+:10005C17 6A01                    push 00000001
+:10005C19 6800001240              push 40120000
+:10005C1E 6A00                    push 00000000
+:10005C20 6800003940              push 40390000
+:10005C25 6A00                    push 00000000
+:10005C27 57                      push edi
+:10005C28 56                      push esi
+:10005C29 53                      push ebx
+:10005C2A 52                      push edx
+:10005C2B 50                      push eax
+:10005C2C E89F0A0000              call 100066D0
+:10005C31 DD5C2460                fstp 64real[esp+60]
+:10005C35 83C428                  add esp, 00000028
+:10005C38 8B4C243C                mov ecx, dword[esp+3C]
+:10005C3C 8B542438                mov edx, dword[esp+38]
+:10005C40 6A01                    push 00000001
+:10005C42 6800001240              push 40120000
+:10005C47 6A00                    push 00000000
+:10005C49 6800003940              push 40390000
+:10005C4E 6A00                    push 00000000
+:10005C50 57                      push edi
+:10005C51 56                      push esi
+:10005C52 53                      push ebx
+:10005C53 51                      push ecx
+:10005C54 52                      push edx
+:10005C55 E8760A0000              call 100066D0
+:10005C5A DD5C2460                fstp 64real[esp+60]
+:10005C5E 83C428                  add esp, 00000028
+:10005C61 8B44243C                mov eax, dword[esp+3C]
+:10005C65 8B4C2438                mov ecx, dword[esp+38]
+:10005C69 6A01                    push 00000001
+:10005C6B 6800001240              push 40120000
+:10005C70 6A00                    push 00000000
+:10005C72 6800003940              push 40390000
+:10005C77 6A00                    push 00000000
+:10005C79 57                      push edi
+:10005C7A 56                      push esi
+:10005C7B 53                      push ebx
+:10005C7C 50                      push eax
+:10005C7D 51                      push ecx
+:10005C7E E84D0A0000              call 100066D0
+:10005C83 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005C88 83C428                  add esp, 00000028
+:10005C8B DD5C2438                fstp 64real[esp+38]
+:10005C8F 85C0                    test eax, eax
+:10005C91 741C                    je 10005CAF
+:10005C93 8B54243C                mov edx, dword[esp+3C]
+:10005C97 8B442438                mov eax, dword[esp+38]
+:10005C9B 8B4C2428                mov ecx, dword[esp+28]
+:10005C9F 52                      push edx
+:10005CA0 50                      push eax
+:10005CA1 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:10005CA6 51                      push ecx
+:10005CA7 E824C40100              call 100220D0
+:10005CAC 83C410                  add esp, 00000010
+---------
+:10005CAF DD442438                fld 64real[esp+38]
+:10005CB3 E808C30100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:10005CB8 8BC8                    mov ecx, eax
+:10005CBA 83C302                  add ebx, 00000002
+:10005CBD 99                      cdq
+:10005CBE 33C2                    xor eax, edx
+:10005CC0 2BC2                    sub eax, edx
+:10005CC2 25FF000000              and eax, 000000FF
+:10005CC7 33C2                    xor eax, edx
+:10005CC9 2BC2                    sub eax, edx
+:10005CCB 89442438                mov dword[esp+38], eax
+:10005CCF 8B442430                mov eax, dword[esp+30]
+:10005CD3 8B542438                mov edx, dword[esp+38]
+:10005CD7 8810                    mov byte[eax], dl
+:10005CD9 40                      inc eax
+:10005CDA 89442430                mov dword[esp+30], eax
+:10005CDE 8BC1                    mov eax, ecx
+:10005CE0 99                      cdq
+:10005CE1 81E2FF000000            and edx, 000000FF
+:10005CE7 03C2                    add eax, edx
+:10005CE9 8BC8                    mov ecx, eax
+:10005CEB 8B442430                mov eax, dword[esp+30]
+:10005CEF C1F908                  sar ecx, 08
+:10005CF2 8808                    mov byte[eax], cl
+:10005CF4 8B4C2420                mov ecx, dword[esp+20]
+:10005CF8 40                      inc eax
+:10005CF9 89442430                mov dword[esp+30], eax
+:10005CFD 8B442410                mov eax, dword[esp+10]
+:10005D01 40                      inc eax
+:10005D02 3BC1                    cmp eax, ecx
+:10005D04 89442410                mov dword[esp+10], eax
+:10005D08 0F8C43FAFFFF            jl 10005751
+---------
+:10005D0E 807C240F03              cmp byte[esp+0F], 03
+:10005D13 0F8500050000            jne 10006219
+:10005D19 8B442420                mov eax, dword[esp+20]
+:10005D1D C744241000000000        mov dword[esp+10], 00000000
+:10005D25 85C0                    test eax, eax
+:10005D27 0F8EEC040000            jle 10006219
+:10005D2D 8B750C                  mov esi, dword[ebp+0C]
+:10005D30 8B7C241C                mov edi, dword[esp+1C]
+---------
+:10005D34 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005D39 C744244000000000        mov dword[esp+40], 00000000
+:10005D41 85C0                    test eax, eax
+:10005D43 C744244400000000        mov dword[esp+44], 00000000
+:10005D4B 7417                    je 10005D64
+:10005D4D 8B542410                mov edx, dword[esp+10]
+:10005D51 8B442424                mov eax, dword[esp+24]
+:10005D55 52                      push edx
+:10005D56 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10005D5B 50                      push eax
+:10005D5C E86FC30100              call 100220D0
+:10005D61 83C40C                  add esp, 0000000C
+---------
+:10005D64 85FF                    test edi, edi
+:10005D66 7E55                    jle 10005DBD
+:10005D68 895C2434                mov dword[esp+34], ebx
+:10005D6C 897C2438                mov dword[esp+38], edi
+---------
+:10005D70 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005D75 85C0                    test eax, eax
+:10005D77 741B                    je 10005D94
+:10005D79 8B542434                mov edx, dword[esp+34]
+:10005D7D 8B442424                mov eax, dword[esp+24]
+:10005D81 33C9                    xor ecx, ecx
+:10005D83 8A0A                    mov cl, byte[edx]
+:10005D85 51                      push ecx
+:10005D86 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:10005D8B 50                      push eax
+:10005D8C E83FC30100              call 100220D0
+:10005D91 83C40C                  add esp, 0000000C
+---------
+:10005D94 8B442434                mov eax, dword[esp+34]
+:10005D98 33C9                    xor ecx, ecx
+:10005D9A 8A08                    mov cl, byte[eax]
+:10005D9C 03C6                    add eax, esi
+:10005D9E 894C2434                mov dword[esp+34], ecx
+:10005DA2 DB442434                fild dword[esp+34]
+:10005DA6 89442434                mov dword[esp+34], eax
+:10005DAA 8B442438                mov eax, dword[esp+38]
+:10005DAE 48                      dec eax
+:10005DAF DC442440                fadd 64real[esp+40]
+:10005DB3 89442438                mov dword[esp+38], eax
+:10005DB7 DD5C2440                fstp 64real[esp+40]
+:10005DBB 75B3                    jne 10005D70
+---------
+:10005DBD DD442440                fld 64real[esp+40]
+:10005DC1 DB44241C                fild dword[esp+1C]
+:10005DC5 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005DCA 85C0                    test eax, eax
+:10005DCC DD5C2448                fstp 64real[esp+48]
+:10005DD0 DC742448                fdiv 64real[esp+48]
+:10005DD4 DD5C2438                fstp 64real[esp+38]
+:10005DD8 741C                    je 10005DF6
+:10005DDA 8B54243C                mov edx, dword[esp+3C]
+:10005DDE 8B442438                mov eax, dword[esp+38]
+:10005DE2 8B4C2424                mov ecx, dword[esp+24]
+:10005DE6 52                      push edx
+:10005DE7 50                      push eax
+:10005DE8 68B8E00210              push 1002E0B8
+                      (StringData)"==>%3d <lf>"
+:10005DED 51                      push ecx
+:10005DEE E8DDC20100              call 100220D0
+:10005DF3 83C410                  add esp, 00000010
+---------
+:10005DF6 8B54243C                mov edx, dword[esp+3C]
+:10005DFA 8B442438                mov eax, dword[esp+38]
+:10005DFE 6A01                    push 00000001
+:10005E00 6800001240              push 40120000
+:10005E05 6A00                    push 00000000
+:10005E07 6800003940              push 40390000
+:10005E0C 6A00                    push 00000000
+:10005E0E 57                      push edi
+:10005E0F 56                      push esi
+:10005E10 53                      push ebx
+:10005E11 52                      push edx
+:10005E12 50                      push eax
+:10005E13 E8B8080000              call 100066D0
+:10005E18 DD5C2460                fstp 64real[esp+60]
+:10005E1C 83C428                  add esp, 00000028
+:10005E1F 8B4C243C                mov ecx, dword[esp+3C]
+:10005E23 8B542438                mov edx, dword[esp+38]
+:10005E27 6A01                    push 00000001
+:10005E29 6800001240              push 40120000
+:10005E2E 6A00                    push 00000000
+:10005E30 6800003940              push 40390000
+:10005E35 6A00                    push 00000000
+:10005E37 57                      push edi
+:10005E38 56                      push esi
+:10005E39 53                      push ebx
+:10005E3A 51                      push ecx
+:10005E3B 52                      push edx
+:10005E3C E88F080000              call 100066D0
+:10005E41 DD5C2460                fstp 64real[esp+60]
+:10005E45 83C428                  add esp, 00000028
+:10005E48 8B44243C                mov eax, dword[esp+3C]
+:10005E4C 8B4C2438                mov ecx, dword[esp+38]
+:10005E50 6A01                    push 00000001
+:10005E52 6800001240              push 40120000
+:10005E57 6A00                    push 00000000
+:10005E59 6800003940              push 40390000
+:10005E5E 6A00                    push 00000000
+:10005E60 57                      push edi
+:10005E61 56                      push esi
+:10005E62 53                      push ebx
+:10005E63 50                      push eax
+:10005E64 51                      push ecx
+:10005E65 E866080000              call 100066D0
+:10005E6A DD5C2460                fstp 64real[esp+60]
+:10005E6E 83C428                  add esp, 00000028
+:10005E71 8B54243C                mov edx, dword[esp+3C]
+:10005E75 8B442438                mov eax, dword[esp+38]
+:10005E79 6A01                    push 00000001
+:10005E7B 6800001240              push 40120000
+:10005E80 6A00                    push 00000000
+:10005E82 6800003940              push 40390000
+:10005E87 6A00                    push 00000000
+:10005E89 57                      push edi
+:10005E8A 56                      push esi
+:10005E8B 53                      push ebx
+:10005E8C 52                      push edx
+:10005E8D 50                      push eax
+:10005E8E E83D080000              call 100066D0
+:10005E93 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005E98 83C428                  add esp, 00000028
+:10005E9B DD5C2438                fstp 64real[esp+38]
+:10005E9F 85C0                    test eax, eax
+:10005EA1 741C                    je 10005EBF
+:10005EA3 8B4C243C                mov ecx, dword[esp+3C]
+:10005EA7 8B542438                mov edx, dword[esp+38]
+:10005EAB 8B442424                mov eax, dword[esp+24]
+:10005EAF 51                      push ecx
+:10005EB0 52                      push edx
+:10005EB1 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:10005EB6 50                      push eax
+:10005EB7 E814C20100              call 100220D0
+:10005EBC 83C410                  add esp, 00000010
+---------
+:10005EBF DD442438                fld 64real[esp+38]
+:10005EC3 E8F8C00100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:10005EC8 8B4C242C                mov ecx, dword[esp+2C]
+:10005ECC C744244000000000        mov dword[esp+40], 00000000
+:10005ED4 C744244400000000        mov dword[esp+44], 00000000
+:10005EDC 8801                    mov byte[ecx], al
+:10005EDE A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005EE3 41                      inc ecx
+:10005EE4 43                      inc ebx
+:10005EE5 85C0                    test eax, eax
+:10005EE7 894C242C                mov dword[esp+2C], ecx
+:10005EEB 7417                    je 10005F04
+:10005EED 8B4C2410                mov ecx, dword[esp+10]
+:10005EF1 8B542414                mov edx, dword[esp+14]
+:10005EF5 51                      push ecx
+:10005EF6 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10005EFB 52                      push edx
+:10005EFC E8CFC10100              call 100220D0
+:10005F01 83C40C                  add esp, 0000000C
+---------
+:10005F04 85FF                    test edi, edi
+:10005F06 7E55                    jle 10005F5D
+:10005F08 895C2434                mov dword[esp+34], ebx
+:10005F0C 897C2438                mov dword[esp+38], edi
+---------
+:10005F10 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005F15 85C0                    test eax, eax
+:10005F17 741B                    je 10005F34
+:10005F19 8B4C2434                mov ecx, dword[esp+34]
+:10005F1D 8B542414                mov edx, dword[esp+14]
+:10005F21 33C0                    xor eax, eax
+:10005F23 8A01                    mov al, byte[ecx]
+:10005F25 50                      push eax
+:10005F26 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:10005F2B 52                      push edx
+:10005F2C E89FC10100              call 100220D0
+:10005F31 83C40C                  add esp, 0000000C
+---------
+:10005F34 8B442434                mov eax, dword[esp+34]
+:10005F38 33C9                    xor ecx, ecx
+:10005F3A 8A08                    mov cl, byte[eax]
+:10005F3C 03C6                    add eax, esi
+:10005F3E 894C2434                mov dword[esp+34], ecx
+:10005F42 DB442434                fild dword[esp+34]
+:10005F46 89442434                mov dword[esp+34], eax
+:10005F4A 8B442438                mov eax, dword[esp+38]
+:10005F4E 48                      dec eax
+:10005F4F DC442440                fadd 64real[esp+40]
+:10005F53 89442438                mov dword[esp+38], eax
+:10005F57 DD5C2440                fstp 64real[esp+40]
+:10005F5B 75B3                    jne 10005F10
+---------
+:10005F5D DD442440                fld 64real[esp+40]
+:10005F61 DC742448                fdiv 64real[esp+48]
+:10005F65 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10005F6A 85C0                    test eax, eax
+:10005F6C DD5C2438                fstp 64real[esp+38]
+:10005F70 741C                    je 10005F8E
+:10005F72 8B54243C                mov edx, dword[esp+3C]
+:10005F76 8B442438                mov eax, dword[esp+38]
+:10005F7A 8B4C2414                mov ecx, dword[esp+14]
+:10005F7E 52                      push edx
+:10005F7F 50                      push eax
+:10005F80 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:10005F85 51                      push ecx
+:10005F86 E845C10100              call 100220D0
+:10005F8B 83C410                  add esp, 00000010
+---------
+:10005F8E 8B54243C                mov edx, dword[esp+3C]
+:10005F92 8B442438                mov eax, dword[esp+38]
+:10005F96 6A01                    push 00000001
+:10005F98 6800001240              push 40120000
+:10005F9D 6A00                    push 00000000
+:10005F9F 6800003940              push 40390000
+:10005FA4 6A00                    push 00000000
+:10005FA6 57                      push edi
+:10005FA7 56                      push esi
+:10005FA8 53                      push ebx
+:10005FA9 52                      push edx
+:10005FAA 50                      push eax
+:10005FAB E820070000              call 100066D0
+:10005FB0 DD5C2460                fstp 64real[esp+60]
+:10005FB4 83C428                  add esp, 00000028
+:10005FB7 8B4C243C                mov ecx, dword[esp+3C]
+:10005FBB 8B542438                mov edx, dword[esp+38]
+:10005FBF 6A01                    push 00000001
+:10005FC1 6800001240              push 40120000
+:10005FC6 6A00                    push 00000000
+:10005FC8 6800003940              push 40390000
+:10005FCD 6A00                    push 00000000
+:10005FCF 57                      push edi
+:10005FD0 56                      push esi
+:10005FD1 53                      push ebx
+:10005FD2 51                      push ecx
+:10005FD3 52                      push edx
+:10005FD4 E8F7060000              call 100066D0
+:10005FD9 DD5C2460                fstp 64real[esp+60]
+:10005FDD 83C428                  add esp, 00000028
+:10005FE0 8B44243C                mov eax, dword[esp+3C]
+:10005FE4 8B4C2438                mov ecx, dword[esp+38]
+:10005FE8 6A01                    push 00000001
+:10005FEA 6800001240              push 40120000
+:10005FEF 6A00                    push 00000000
+:10005FF1 6800003940              push 40390000
+:10005FF6 6A00                    push 00000000
+:10005FF8 57                      push edi
+:10005FF9 56                      push esi
+:10005FFA 53                      push ebx
+:10005FFB 50                      push eax
+:10005FFC 51                      push ecx
+:10005FFD E8CE060000              call 100066D0
+:10006002 DD5C2460                fstp 64real[esp+60]
+:10006006 83C428                  add esp, 00000028
+:10006009 8B54243C                mov edx, dword[esp+3C]
+:1000600D 8B442438                mov eax, dword[esp+38]
+:10006011 6A01                    push 00000001
+:10006013 6800001240              push 40120000
+:10006018 6A00                    push 00000000
+:1000601A 6800003940              push 40390000
+:1000601F 6A00                    push 00000000
+:10006021 57                      push edi
+:10006022 56                      push esi
+:10006023 53                      push ebx
+:10006024 52                      push edx
+:10006025 50                      push eax
+:10006026 E8A5060000              call 100066D0
+:1000602B A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006030 83C428                  add esp, 00000028
+:10006033 DD5C2438                fstp 64real[esp+38]
+:10006037 85C0                    test eax, eax
+:10006039 741C                    je 10006057
+:1000603B 8B4C243C                mov ecx, dword[esp+3C]
+:1000603F 8B542438                mov edx, dword[esp+38]
+:10006043 8B442414                mov eax, dword[esp+14]
+:10006047 51                      push ecx
+:10006048 52                      push edx
+:10006049 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:1000604E 50                      push eax
+:1000604F E87CC00100              call 100220D0
+:10006054 83C410                  add esp, 00000010
+---------
+:10006057 DD442438                fld 64real[esp+38]
+:1000605B E860BF0100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:10006060 8B4C2418                mov ecx, dword[esp+18]
+:10006064 C744244000000000        mov dword[esp+40], 00000000
+:1000606C C744244400000000        mov dword[esp+44], 00000000
+:10006074 8801                    mov byte[ecx], al
+:10006076 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:1000607B 41                      inc ecx
+:1000607C 43                      inc ebx
+:1000607D 85C0                    test eax, eax
+:1000607F 894C2418                mov dword[esp+18], ecx
+:10006083 7417                    je 1000609C
+:10006085 8B4C2410                mov ecx, dword[esp+10]
+:10006089 8B542428                mov edx, dword[esp+28]
+:1000608D 51                      push ecx
+:1000608E 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10006093 52                      push edx
+:10006094 E837C00100              call 100220D0
+:10006099 83C40C                  add esp, 0000000C
+---------
+:1000609C 85FF                    test edi, edi
+:1000609E 7E55                    jle 100060F5
+:100060A0 895C2434                mov dword[esp+34], ebx
+:100060A4 897C2438                mov dword[esp+38], edi
+---------
+:100060A8 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100060AD 85C0                    test eax, eax
+:100060AF 741B                    je 100060CC
+:100060B1 8B4C2434                mov ecx, dword[esp+34]
+:100060B5 8B542428                mov edx, dword[esp+28]
+:100060B9 33C0                    xor eax, eax
+:100060BB 8A01                    mov al, byte[ecx]
+:100060BD 50                      push eax
+:100060BE 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:100060C3 52                      push edx
+:100060C4 E807C00100              call 100220D0
+:100060C9 83C40C                  add esp, 0000000C
+---------
+:100060CC 8B442434                mov eax, dword[esp+34]
+:100060D0 33C9                    xor ecx, ecx
+:100060D2 8A08                    mov cl, byte[eax]
+:100060D4 03C6                    add eax, esi
+:100060D6 894C2434                mov dword[esp+34], ecx
+:100060DA DB442434                fild dword[esp+34]
+:100060DE 89442434                mov dword[esp+34], eax
+:100060E2 8B442438                mov eax, dword[esp+38]
+:100060E6 48                      dec eax
+:100060E7 DC442440                fadd 64real[esp+40]
+:100060EB 89442438                mov dword[esp+38], eax
+:100060EF DD5C2440                fstp 64real[esp+40]
+:100060F3 75B3                    jne 100060A8
+---------
+:100060F5 DD442440                fld 64real[esp+40]
+:100060F9 DC742448                fdiv 64real[esp+48]
+:100060FD A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006102 85C0                    test eax, eax
+:10006104 DD5C2438                fstp 64real[esp+38]
+:10006108 741C                    je 10006126
+:1000610A 8B54243C                mov edx, dword[esp+3C]
+:1000610E 8B442438                mov eax, dword[esp+38]
+:10006112 8B4C2428                mov ecx, dword[esp+28]
+:10006116 52                      push edx
+:10006117 50                      push eax
+:10006118 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:1000611D 51                      push ecx
+:1000611E E8ADBF0100              call 100220D0
+:10006123 83C410                  add esp, 00000010
+---------
+:10006126 8B54243C                mov edx, dword[esp+3C]
+:1000612A 8B442438                mov eax, dword[esp+38]
+:1000612E 6A01                    push 00000001
+:10006130 6800001240              push 40120000
+:10006135 6A00                    push 00000000
+:10006137 6800003940              push 40390000
+:1000613C 6A00                    push 00000000
+:1000613E 57                      push edi
+:1000613F 56                      push esi
+:10006140 53                      push ebx
+:10006141 52                      push edx
+:10006142 50                      push eax
+:10006143 E888050000              call 100066D0
+:10006148 DD5C2460                fstp 64real[esp+60]
+:1000614C 83C428                  add esp, 00000028
+:1000614F 8B4C243C                mov ecx, dword[esp+3C]
+:10006153 8B542438                mov edx, dword[esp+38]
+:10006157 6A01                    push 00000001
+:10006159 6800001240              push 40120000
+:1000615E 6A00                    push 00000000
+:10006160 6800003940              push 40390000
+:10006165 6A00                    push 00000000
+:10006167 57                      push edi
+:10006168 56                      push esi
+:10006169 53                      push ebx
+:1000616A 51                      push ecx
+:1000616B 52                      push edx
+:1000616C E85F050000              call 100066D0
+:10006171 DD5C2460                fstp 64real[esp+60]
+:10006175 83C428                  add esp, 00000028
+:10006178 8B44243C                mov eax, dword[esp+3C]
+:1000617C 8B4C2438                mov ecx, dword[esp+38]
+:10006180 6A01                    push 00000001
+:10006182 6800001240              push 40120000
+:10006187 6A00                    push 00000000
+:10006189 6800003940              push 40390000
+:1000618E 6A00                    push 00000000
+:10006190 57                      push edi
+:10006191 56                      push esi
+:10006192 53                      push ebx
+:10006193 50                      push eax
+:10006194 51                      push ecx
+:10006195 E836050000              call 100066D0
+:1000619A DD5C2460                fstp 64real[esp+60]
+:1000619E 83C428                  add esp, 00000028
+:100061A1 8B54243C                mov edx, dword[esp+3C]
+:100061A5 8B442438                mov eax, dword[esp+38]
+:100061A9 6A01                    push 00000001
+:100061AB 6800001240              push 40120000
+:100061B0 6A00                    push 00000000
+:100061B2 6800003940              push 40390000
+:100061B7 6A00                    push 00000000
+:100061B9 57                      push edi
+:100061BA 56                      push esi
+:100061BB 53                      push ebx
+:100061BC 52                      push edx
+:100061BD 50                      push eax
+:100061BE E80D050000              call 100066D0
+:100061C3 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100061C8 83C428                  add esp, 00000028
+:100061CB DD5C2438                fstp 64real[esp+38]
+:100061CF 85C0                    test eax, eax
+:100061D1 741C                    je 100061EF
+:100061D3 8B4C243C                mov ecx, dword[esp+3C]
+:100061D7 8B542438                mov edx, dword[esp+38]
+:100061DB 8B442428                mov eax, dword[esp+28]
+:100061DF 51                      push ecx
+:100061E0 52                      push edx
+:100061E1 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:100061E6 50                      push eax
+:100061E7 E8E4BE0100              call 100220D0
+:100061EC 83C410                  add esp, 00000010
+---------
+:100061EF DD442438                fld 64real[esp+38]
+:100061F3 E8C8BD0100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:100061F8 8B4C2430                mov ecx, dword[esp+30]
+:100061FC 8801                    mov byte[ecx], al
+:100061FE 8B442410                mov eax, dword[esp+10]
+:10006202 41                      inc ecx
+:10006203 43                      inc ebx
+:10006204 894C2430                mov dword[esp+30], ecx
+:10006208 8B4C2420                mov ecx, dword[esp+20]
+:1000620C 40                      inc eax
+:1000620D 3BC1                    cmp eax, ecx
+:1000620F 89442410                mov dword[esp+10], eax
+:10006213 0F8C1BFBFFFF            jl 10005D34
+---------
+:10006219 807C240F02              cmp byte[esp+0F], 02
+:1000621E 0F8539020000            jne 1000645D
+:10006224 8B442420                mov eax, dword[esp+20]
+:10006228 C744241000000000        mov dword[esp+10], 00000000
+:10006230 85C0                    test eax, eax
+:10006232 0F8EF4010000            jle 1000642C
+:10006238 8B7D0C                  mov edi, dword[ebp+0C] ; , arg2
+:1000623B 8B442410                mov eax, dword[esp+10]
+:1000623F 8B74241C                mov esi, dword[esp+1C]
+---------
+:10006243 8B0D68891210            mov ecx, dword[10128968] ; , GDumpDarkGain
+:10006249 C744244000000000        mov dword[esp+40], 00000000
+:10006251 85C9                    test ecx, ecx
+:10006253 C744244400000000        mov dword[esp+44], 00000000
+:1000625B 7413                    je 10006270
+:1000625D 8B4C2414                mov ecx, dword[esp+14]
+:10006261 50                      push eax
+:10006262 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:10006267 51                      push ecx
+:10006268 E863BE0100              call 100220D0
+:1000626D 83C40C                  add esp, 0000000C
+---------
+:10006270 85F6                    test esi, esi
+:10006272 7E5B                    jle 100062CF
+:10006274 8B54241C                mov edx, dword[esp+1C]
+:10006278 8BF3                    mov esi, ebx
+:1000627A 89542438                mov dword[esp+38], edx
+---------
+:1000627E A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006283 85C0                    test eax, eax
+:10006285 7417                    je 1000629E
+:10006287 8B4C2414                mov ecx, dword[esp+14]
+:1000628B 33C0                    xor eax, eax
+:1000628D 8A06                    mov al, byte[esi]
+:1000628F 50                      push eax
+:10006290 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:10006295 51                      push ecx
+:10006296 E835BE0100              call 100220D0
+:1000629B 83C40C                  add esp, 0000000C
+---------
+:1000629E 660FB65601              movzx dx, byte[esi+01]
+:100062A3 660FB606                movzx ax, byte[esi]
+:100062A7 C1E208                  shl edx, 08
+:100062AA 03D0                    add edx, eax
+:100062AC 8B442438                mov eax, dword[esp+38]
+:100062B0 81E2FFFF0000            and edx, 0000FFFF
+:100062B6 03F7                    add esi, edi
+:100062B8 89542434                mov dword[esp+34], edx
+:100062BC 48                      dec eax
+:100062BD DB442434                fild dword[esp+34]
+:100062C1 89442438                mov dword[esp+38], eax
+:100062C5 DC442440                fadd 64real[esp+40]
+:100062C9 DD5C2440                fstp 64real[esp+40]
+:100062CD 75AF                    jne 1000627E
+---------
+:100062CF DB44241C                fild dword[esp+1C]
+:100062D3 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100062D8 85C0                    test eax, eax
+:100062DA DC7C2440                fdivr 64real[esp+40]
+:100062DE DD5C2438                fstp 64real[esp+38]
+:100062E2 741C                    je 10006300
+:100062E4 8B4C243C                mov ecx, dword[esp+3C]
+:100062E8 8B542438                mov edx, dword[esp+38]
+:100062EC 8B442414                mov eax, dword[esp+14]
+:100062F0 51                      push ecx
+:100062F1 52                      push edx
+:100062F2 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:100062F7 50                      push eax
+:100062F8 E8D3BD0100              call 100220D0
+:100062FD 83C410                  add esp, 00000010
+---------
+:10006300 8B74241C                mov esi, dword[esp+1C]
+:10006304 8B4C243C                mov ecx, dword[esp+3C]
+:10006308 8B542438                mov edx, dword[esp+38]
+:1000630C 6A01                    push 00000001
+:1000630E 6800001240              push 40120000
+:10006313 6A00                    push 00000000
+:10006315 6800003940              push 40390000
+:1000631A 6A00                    push 00000000
+:1000631C 56                      push esi
+:1000631D 57                      push edi
+:1000631E 53                      push ebx
+:1000631F 51                      push ecx
+:10006320 52                      push edx
+:10006321 E8AA030000              call 100066D0
+:10006326 DD5C2460                fstp 64real[esp+60]
+:1000632A 83C428                  add esp, 00000028
+:1000632D 8B44243C                mov eax, dword[esp+3C]
+:10006331 8B4C2438                mov ecx, dword[esp+38]
+:10006335 6A01                    push 00000001
+:10006337 6800001240              push 40120000
+:1000633C 6A00                    push 00000000
+:1000633E 6800003940              push 40390000
+:10006343 6A00                    push 00000000
+:10006345 56                      push esi
+:10006346 57                      push edi
+:10006347 53                      push ebx
+:10006348 50                      push eax
+:10006349 51                      push ecx
+:1000634A E881030000              call 100066D0
+:1000634F DD5C2460                fstp 64real[esp+60]
+:10006353 83C428                  add esp, 00000028
+:10006356 8B54243C                mov edx, dword[esp+3C]
+:1000635A 8B442438                mov eax, dword[esp+38]
+:1000635E 6A01                    push 00000001
+:10006360 6800001240              push 40120000
+:10006365 6A00                    push 00000000
+:10006367 6800003940              push 40390000
+:1000636C 6A00                    push 00000000
+:1000636E 56                      push esi
+:1000636F 57                      push edi
+:10006370 53                      push ebx
+:10006371 52                      push edx
+:10006372 50                      push eax
+:10006373 E858030000              call 100066D0
+:10006378 DD5C2460                fstp 64real[esp+60]
+:1000637C 83C428                  add esp, 00000028
+:1000637F 8B4C243C                mov ecx, dword[esp+3C]
+:10006383 8B542438                mov edx, dword[esp+38]
+:10006387 6A01                    push 00000001
+:10006389 6800001240              push 40120000
+:1000638E 6A00                    push 00000000
+:10006390 6800003940              push 40390000
+:10006395 6A00                    push 00000000
+:10006397 56                      push esi
+:10006398 57                      push edi
+:10006399 53                      push ebx
+:1000639A 51                      push ecx
+:1000639B 52                      push edx
+:1000639C E82F030000              call 100066D0
+:100063A1 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100063A6 83C428                  add esp, 00000028
+:100063A9 DD5C2438                fstp 64real[esp+38]
+:100063AD 85C0                    test eax, eax
+:100063AF 741C                    je 100063CD
+:100063B1 8B44243C                mov eax, dword[esp+3C]
+:100063B5 8B4C2438                mov ecx, dword[esp+38]
+:100063B9 8B542414                mov edx, dword[esp+14]
+:100063BD 50                      push eax
+:100063BE 51                      push ecx
+:100063BF 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:100063C4 52                      push edx
+:100063C5 E806BD0100              call 100220D0
+:100063CA 83C410                  add esp, 00000010
+---------
+:100063CD DD442438                fld 64real[esp+38]
+:100063D1 E8EABB0100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:100063D6 8BC8                    mov ecx, eax
+:100063D8 83C302                  add ebx, 00000002
+:100063DB 99                      cdq
+:100063DC 33C2                    xor eax, edx
+:100063DE 2BC2                    sub eax, edx
+:100063E0 25FF000000              and eax, 000000FF
+:100063E5 33C2                    xor eax, edx
+:100063E7 2BC2                    sub eax, edx
+:100063E9 89442438                mov dword[esp+38], eax
+:100063ED 8B442418                mov eax, dword[esp+18]
+:100063F1 8B542438                mov edx, dword[esp+38]
+:100063F5 8810                    mov byte[eax], dl
+:100063F7 40                      inc eax
+:100063F8 89442418                mov dword[esp+18], eax
+:100063FC 8BC1                    mov eax, ecx
+:100063FE 99                      cdq
+:100063FF 81E2FF000000            and edx, 000000FF
+:10006405 03C2                    add eax, edx
+:10006407 8BC8                    mov ecx, eax
+:10006409 8B442418                mov eax, dword[esp+18]
+:1000640D C1F908                  sar ecx, 08
+:10006410 8808                    mov byte[eax], cl
+:10006412 8B4C2420                mov ecx, dword[esp+20]
+:10006416 40                      inc eax
+:10006417 89442418                mov dword[esp+18], eax
+:1000641B 8B442410                mov eax, dword[esp+10]
+:1000641F 40                      inc eax
+:10006420 3BC1                    cmp eax, ecx
+:10006422 89442410                mov dword[esp+10], eax
+:10006426 0F8C17FEFFFF            jl 10006243
+---------
+:1000642C 8B542420                mov edx, dword[esp+20]
+:10006430 8B7524                  mov esi, dword[ebp+24] ; , arg8
+:10006433 8B7D20                  mov edi, dword[ebp+20] ; , arg7
+:10006436 8D0412                  lea eax, dword[edx+edx]
+:10006439 8BC8                    mov ecx, eax
+:1000643B 8BD1                    mov edx, ecx
+:1000643D C1E902                  shr ecx, 02
+:10006440 F3A5                    rep movsd
+:10006442 8BCA                    mov ecx, edx
+:10006444 83E103                  and ecx, 00000003
+:10006447 F3A4                    rep movsb
+:10006449 8B7524                  mov esi, dword[ebp+24] ; , arg8
+:1000644C 8B7D28                  mov edi, dword[ebp+28] ; , arg7
+:1000644F 8BC8                    mov ecx, eax
+:10006451 C1E902                  shr ecx, 02
+:10006454 F3A5                    rep movsd
+:10006456 8BC8                    mov ecx, eax
+:10006458 83E103                  and ecx, 00000003
+:1000645B F3A4                    rep movsb
+---------
+:1000645D 807C240F01              cmp byte[esp+0F], 01
+:10006462 0F85F7010000            jne 1000665F
+:10006468 8B442420                mov eax, dword[esp+20]
+:1000646C C744241000000000        mov dword[esp+10], 00000000
+:10006474 85C0                    test eax, eax
+:10006476 0F8EB4010000            jle 10006630
+:1000647C 8B750C                  mov esi, dword[ebp+0C] ; , arg2
+:1000647F 8B7C241C                mov edi, dword[esp+1C]
+---------
+:10006483 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006488 C744244000000000        mov dword[esp+40], 00000000
+:10006490 85C0                    test eax, eax
+:10006492 C744244400000000        mov dword[esp+44], 00000000
+:1000649A 7417                    je 100064B3
+:1000649C 8B4C2410                mov ecx, dword[esp+10]
+:100064A0 8B542414                mov edx, dword[esp+14]
+:100064A4 51                      push ecx
+:100064A5 68C8E00210              push 1002E0C8
+                      (StringData)"[%4d] "
+:100064AA 52                      push edx
+:100064AB E820BC0100              call 100220D0
+:100064B0 83C40C                  add esp, 0000000C
+---------
+:100064B3 85FF                    test edi, edi
+:100064B5 7E55                    jle 1000650C
+:100064B7 895C2434                mov dword[esp+34], ebx
+:100064BB 897C2438                mov dword[esp+38], edi
+---------
+:100064BF A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100064C4 85C0                    test eax, eax
+:100064C6 741B                    je 100064E3
+:100064C8 8B4C2434                mov ecx, dword[esp+34]
+:100064CC 8B542414                mov edx, dword[esp+14]
+:100064D0 33C0                    xor eax, eax
+:100064D2 8A01                    mov al, byte[ecx]
+:100064D4 50                      push eax
+:100064D5 68C0E00210              push 1002E0C0
+                      (StringData)"%3d "
+:100064DA 52                      push edx
+:100064DB E8F0BB0100              call 100220D0
+:100064E0 83C40C                  add esp, 0000000C
+---------
+:100064E3 8B442434                mov eax, dword[esp+34]
+:100064E7 33C9                    xor ecx, ecx
+:100064E9 8A08                    mov cl, byte[eax]
+:100064EB 03C6                    add eax, esi
+:100064ED 894C2434                mov dword[esp+34], ecx
+:100064F1 DB442434                fild dword[esp+34]
+:100064F5 89442434                mov dword[esp+34], eax
+:100064F9 8B442438                mov eax, dword[esp+38]
+:100064FD 48                      dec eax
+:100064FE DC442440                fadd 64real[esp+40]
+:10006502 89442438                mov dword[esp+38], eax
+:10006506 DD5C2440                fstp 64real[esp+40]
+:1000650A 75B3                    jne 100064BF
+---------
+:1000650C DB44241C                fild dword[esp+1C]
+:10006510 A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006515 85C0                    test eax, eax
+:10006517 DC7C2440                fdivr 64real[esp+40]
+:1000651B DD5C2438                fstp 64real[esp+38]
+:1000651F 741C                    je 1000653D
+:10006521 8B54243C                mov edx, dword[esp+3C]
+:10006525 8B442438                mov eax, dword[esp+38]
+:10006529 8B4C2414                mov ecx, dword[esp+14]
+:1000652D 52                      push edx
+:1000652E 50                      push eax
+:1000652F 68A8E00210              push 1002E0A8
+                      (StringData)"==>%3d"
+:10006534 51                      push ecx
+:10006535 E896BB0100              call 100220D0
+:1000653A 83C410                  add esp, 00000010
+---------
+:1000653D 8B54243C                mov edx, dword[esp+3C]
+:10006541 8B442438                mov eax, dword[esp+38]
+:10006545 6A01                    push 00000001
+:10006547 6800001240              push 40120000
+:1000654C 6A00                    push 00000000
+:1000654E 6800003940              push 40390000
+:10006553 6A00                    push 00000000
+:10006555 57                      push edi
+:10006556 56                      push esi
+:10006557 53                      push ebx
+:10006558 52                      push edx
+:10006559 50                      push eax
+:1000655A E871010000              call 100066D0
+:1000655F DD5C2460                fstp 64real[esp+60]
+:10006563 83C428                  add esp, 00000028
+:10006566 8B4C243C                mov ecx, dword[esp+3C]
+:1000656A 8B542438                mov edx, dword[esp+38]
+:1000656E 6A01                    push 00000001
+:10006570 6800001240              push 40120000
+:10006575 6A00                    push 00000000
+:10006577 6800003940              push 40390000
+:1000657C 6A00                    push 00000000
+:1000657E 57                      push edi
+:1000657F 56                      push esi
+:10006580 53                      push ebx
+:10006581 51                      push ecx
+:10006582 52                      push edx
+:10006583 E848010000              call 100066D0
+:10006588 DD5C2460                fstp 64real[esp+60]
+:1000658C 83C428                  add esp, 00000028
+:1000658F 8B44243C                mov eax, dword[esp+3C]
+:10006593 8B4C2438                mov ecx, dword[esp+38]
+:10006597 6A01                    push 00000001
+:10006599 6800001240              push 40120000
+:1000659E 6A00                    push 00000000
+:100065A0 6800003940              push 40390000
+:100065A5 6A00                    push 00000000
+:100065A7 57                      push edi
+:100065A8 56                      push esi
+:100065A9 53                      push ebx
+:100065AA 50                      push eax
+:100065AB 51                      push ecx
+:100065AC E81F010000              call 100066D0
+:100065B1 DD5C2460                fstp 64real[esp+60]
+:100065B5 83C428                  add esp, 00000028
+:100065B8 8B54243C                mov edx, dword[esp+3C]
+:100065BC 8B442438                mov eax, dword[esp+38]
+:100065C0 6A01                    push 00000001
+:100065C2 6800001240              push 40120000
+:100065C7 6A00                    push 00000000
+:100065C9 6800003940              push 40390000
+:100065CE 6A00                    push 00000000
+:100065D0 57                      push edi
+:100065D1 56                      push esi
+:100065D2 53                      push ebx
+:100065D3 52                      push edx
+:100065D4 50                      push eax
+:100065D5 E8F6000000              call 100066D0
+:100065DA A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:100065DF 83C428                  add esp, 00000028
+:100065E2 DD5C2438                fstp 64real[esp+38]
+:100065E6 85C0                    test eax, eax
+:100065E8 741C                    je 10006606
+:100065EA 8B4C243C                mov ecx, dword[esp+3C]
+:100065EE 8B542438                mov edx, dword[esp+38]
+:100065F2 8B442414                mov eax, dword[esp+14]
+:100065F6 51                      push ecx
+:100065F7 52                      push edx
+:100065F8 68B0E00210              push 1002E0B0
+                      (StringData)"[%3d] <lf>"
+:100065FD 50                      push eax
+:100065FE E8CDBA0100              call 100220D0
+:10006603 83C410                  add esp, 00000010
+---------
+:10006606 DD442438                fld 64real[esp+38]
+:1000660A E8B1B90100              call 10021FC0
+  ;; dword F (*arg1_ret_edx)
+:1000660F 8B4C2418                mov ecx, dword[esp+18]
+:10006613 8801                    mov byte[ecx], al
+:10006615 8B442410                mov eax, dword[esp+10]
+:10006619 41                      inc ecx
+:1000661A 43                      inc ebx
+:1000661B 894C2418                mov dword[esp+18], ecx
+:1000661F 8B4C2420                mov ecx, dword[esp+20]
+:10006623 40                      inc eax
+:10006624 3BC1                    cmp eax, ecx
+:10006626 89442410                mov dword[esp+10], eax
+:1000662A 0F8C53FEFFFF            jl 10006483
+---------
+:10006630 8B542420                mov edx, dword[esp+20]
+:10006634 8B4524                  mov eax, dword[ebp+24] ; , arg8
+:10006637 8B7D20                  mov edi, dword[ebp+20] ; , arg7
+:1000663A 8BCA                    mov ecx, edx
+:1000663C 8BD9                    mov ebx, ecx
+:1000663E 8BF0                    mov esi, eax
+:10006640 C1E902                  shr ecx, 02
+:10006643 F3A5                    rep movsd
+:10006645 8BCB                    mov ecx, ebx
+:10006647 83E103                  and ecx, 00000003
+:1000664A F3A4                    rep movsb
+:1000664C 8B7D28                  mov edi, dword[ebp+28] ; , arg9
+:1000664F 8BCA                    mov ecx, edx
+:10006651 8BF0                    mov esi, eax
+:10006653 C1E902                  shr ecx, 02
+:10006656 F3A5                    rep movsd
+:10006658 8BCA                    mov ecx, edx
+:1000665A 83E103                  and ecx, 00000003
+:1000665D F3A4                    rep movsb
+---------
+:1000665F A168891210              mov eax, dword[10128968] ; , GDumpDarkGain
+:10006664 85C0                    test eax, eax
+:10006666 7427                    je 1000668F
+:10006668 8B442424                mov eax, dword[esp+24]
+:1000666C 50                      push eax
+:1000666D E8AEB90100              call 10022020
+:10006672 8B4C2418                mov ecx, dword[esp+18]
+:10006676 83C404                  add esp, 00000004
+:10006679 51                      push ecx
+:1000667A E8A1B90100              call 10022020
+:1000667F 8B54242C                mov edx, dword[esp+2C]
+:10006683 83C404                  add esp, 00000004
+:10006686 52                      push edx
+:10006687 E894B90100              call 10022020
+:1000668C 83C404                  add esp, 00000004
+---------
+:1000668F 5F                      pop edi
+:10006690 5E                      pop esi
+:10006691 33C0                    xor eax, eax
+:10006693 5B                      pop ebx
+:10006694 8BE5                    mov esp, ebp
+:10006696 5D                      pop ebp
+:10006697 C3                      ret
+
+:10006698 20570010                DWORD 10005720            ;;  W..
+:1000669C 27570010                DWORD 10005727            ;; 'W..
+:100066A0 20570010                DWORD 10005720            ;;  W..
+:100066A4 27570010                DWORD 10005727            ;; 'W..
+:100066A8 27570010                DWORD 10005727            ;; 'W..
+:100066AC 27570010                DWORD 10005727            ;; 'W..
+:100066B0 1A570010                DWORD 1000571A            ;; .W..
+:100066B4 27570010                DWORD 10005727            ;; 'W..
+:100066B8 13570010                DWORD 10005713            ;; .W..
+:100066BC 13570010                DWORD 10005713            ;; .W..
+:100066C0 1A570010                DWORD 1000571A            ;; .W..
+:100066C4 13570010                DWORD 10005713            ;; .W..
+:100066C8 13570010                DWORD 10005713            ;; .W..
